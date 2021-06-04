@@ -1,14 +1,19 @@
 apiVersion: apps/v1
+
+#Deployment that containts the replica set
 kind: Deployment
 metadata: 
   name: db
   labels:
     app: db
+
+#Replica set that deploys two pods
 spec: 
   replicas: 2
   selector: 
     matchLabels: 
       app: db
+#Template for the pods. It de ploys a container with redis image on port 6379
   template:
     metadata: 
       labels:
@@ -22,6 +27,7 @@ spec:
 
 ---
 
+#Service that connects containers trough the target port
 apiVersion: v1
 kind: Service
 metadata: 
