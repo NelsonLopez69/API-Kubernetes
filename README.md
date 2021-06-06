@@ -62,3 +62,14 @@ Routes:
 
 Example: http://10.64.140.44/health
 
+
+## For a productive environment
+
+- For a productive environment, it would ne nice to have a DNS so we can redirect de traffic to the public IP of the load balancer.
+
+- If the implementation takes place in an on premise environment an Horizontal Autoscaler could help improve the **scalability**. In the cloud there are tools that already help with it.
+
+- The deployment could be moved to the cloud for **cost reduction** and more **disponibility**.
+
+- Of course, in a productive environment we always have to **test** the product. So test implementation is necessary.
+- Would ne nice to have a pipeline that automates the building and deployment of the app so it don't need the manual push to docker-hub.
